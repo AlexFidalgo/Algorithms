@@ -53,7 +53,6 @@ def selection_sort(l):
     return sorted_list
 
 
-
 l = [4,2,7,4,9,1,-5,8,0,2,-5,11,1,-13,-9,15]
 
 sorted_list = selection_sort(l)
