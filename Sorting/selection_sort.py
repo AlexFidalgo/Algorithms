@@ -44,7 +44,7 @@ def selection_sort(l):
     
     sorted_list = l.copy()
     
-    for idx in range(len(l)):
+    for idx in range(len(l)-1):
         
         min_idx = find_min(sorted_list[idx:])[1] + idx
         
@@ -53,7 +53,7 @@ def selection_sort(l):
     return sorted_list
 
 
-l = [4,2,7,4,9,1,-5,8,0,2,-5,11,1,-13,-9,15]
+l = [4,2,7,4,9,1,-5,8,0,2,-5,11,1,-13,-9,0]
 
 sorted_list = selection_sort(l)
 
