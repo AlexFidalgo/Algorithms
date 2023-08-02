@@ -19,21 +19,17 @@ def insertion_sort(l):
     n = len(l)
     
     j = 1
-    i = j - 1
        
     while j < n:
         
         initial_j = j
         
-        while i < j and i >= 0 and sorted_list[j] < sorted_list[i]:
+        while j >= 1 and sorted_list[j] < sorted_list[j-1]:
             
-            sorted_list[j],sorted_list[i] = sorted_list[i], sorted_list[j]    
-                
-            i = i - 1
+            sorted_list[j],sorted_list[j-1] = sorted_list[j-1], sorted_list[j]    
             j = j - 1
         
         j= initial_j + 1 
-        i = j - 1
         
     return sorted_list
 
@@ -90,4 +86,3 @@ expected_output = [-10, -5, -3, -2, 0, 1, 8, 10, 15]
 assert insertion_sort(input_list) == expected_output
 
 print("All test cases passed!")
-
